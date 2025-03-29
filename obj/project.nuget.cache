@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "bHXManKqG9HpGJRDuI0ns/0E8LiPbqUizKcx086wgHlBbvygnZihksCTmqtcGZEc0cvfca2as4XuLhoc2EE1lA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Maja Chudzik\\source\\repos\\ticketmaster_55204_51270_51373\\ConcertTracker.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Maja Chudzik\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Maja Chudzik\\.nuget\\packages\\microsoft.openapi\\1.6.23\\microsoft.openapi.1.6.23.nupkg.sha512",
+    "C:\\Users\\Maja Chudzik\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Maja Chudzik\\.nuget\\packages\\swashbuckle.aspnetcore\\8.0.0\\swashbuckle.aspnetcore.8.0.0.nupkg.sha512",
+    "C:\\Users\\Maja Chudzik\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\8.0.0\\swashbuckle.aspnetcore.swagger.8.0.0.nupkg.sha512",
+    "C:\\Users\\Maja Chudzik\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\8.0.0\\swashbuckle.aspnetcore.swaggergen.8.0.0.nupkg.sha512",
+    "C:\\Users\\Maja Chudzik\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\8.0.0\\swashbuckle.aspnetcore.swaggerui.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

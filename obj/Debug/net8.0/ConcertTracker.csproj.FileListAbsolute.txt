@@ -1,0 +1,67 @@
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\bin\Debug\net8.0\appsettings.json
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\bin\Debug\net8.0\ConcertTracker.exe
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\bin\Debug\net8.0\ConcertTracker.deps.json
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\bin\Debug\net8.0\ConcertTracker.runtimeconfig.json
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\bin\Debug\net8.0\ConcertTracker.dll
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\bin\Debug\net8.0\ConcertTracker.pdb
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\obj\Debug\net8.0\ConcertTracker.csproj.AssemblyReference.cache
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\obj\Debug\net8.0\ConcertTracker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\obj\Debug\net8.0\ConcertTracker.AssemblyInfoInputs.cache
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\obj\Debug\net8.0\ConcertTracker.AssemblyInfo.cs
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\obj\Debug\net8.0\ConcertTracker.csproj.CoreCompileInputs.cache
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\obj\Debug\net8.0\ConcertTracker.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\obj\Debug\net8.0\ConcertTracker.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\obj\Debug\net8.0\staticwebassets\msbuild.ConcertTracker.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\obj\Debug\net8.0\staticwebassets\msbuild.build.ConcertTracker.props
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ConcertTracker.props
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ConcertTracker.props
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\obj\Debug\net8.0\scopedcss\bundle\ConcertTracker.styles.css
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\obj\Debug\net8.0\ConcertT.2EA5061D.Up2Date
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\obj\Debug\net8.0\ConcertTracker.dll
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\obj\Debug\net8.0\refint\ConcertTracker.dll
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\obj\Debug\net8.0\ConcertTracker.pdb
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\obj\Debug\net8.0\ConcertTracker.genruntimeconfig.cache
+C:\Users\Maja Chudzik\source\repos\Podstawy Programowania\WebApplication1\obj\Debug\net8.0\ref\ConcertTracker.dll
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\bin\Debug\net8.0\appsettings.json
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\bin\Debug\net8.0\ConcertTracker.exe
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\bin\Debug\net8.0\ConcertTracker.deps.json
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\bin\Debug\net8.0\ConcertTracker.runtimeconfig.json
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\bin\Debug\net8.0\ConcertTracker.dll
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\bin\Debug\net8.0\ConcertTracker.pdb
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\ConcertTracker.csproj.AssemblyReference.cache
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\ConcertTracker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\ConcertTracker.AssemblyInfoInputs.cache
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\ConcertTracker.AssemblyInfo.cs
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\ConcertTracker.csproj.CoreCompileInputs.cache
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\ConcertTracker.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\ConcertTracker.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\ConcertTracker.sourcelink.json
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\staticwebassets\msbuild.ConcertTracker.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\staticwebassets\msbuild.build.ConcertTracker.props
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ConcertTracker.props
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ConcertTracker.props
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\scopedcss\bundle\ConcertTracker.styles.css
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\ConcertT.2EA5061D.Up2Date
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\ConcertTracker.dll
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\refint\ConcertTracker.dll
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\ConcertTracker.pdb
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\ConcertTracker.genruntimeconfig.cache
+C:\Users\Maja Chudzik\source\repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\ref\ConcertTracker.dll

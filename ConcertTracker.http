@@ -1,0 +1,8 @@
+# Adres hosta dla aplikacji
+@ConcertTracker_HostAddress = http://localhost:5101
+
+# Wykonanie ¿¹dania GET do endpointu ticketmastertracker
+GET {{ConcertTracker_HostAddress}}/ticketmastertracker/
+Accept: application/json
+
+###
