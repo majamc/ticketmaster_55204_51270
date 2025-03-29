@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bHXManKqG9HpGJRDuI0ns/0E8LiPbqUizKcx086wgHlBbvygnZihksCTmqtcGZEc0cvfca2as4XuLhoc2EE1lA==",
+  "dgSpecHash": "DoPFRvIQUOOTJ4kONF3Mb392IeuKV4xSfnERETnidXNSnXfpWUsit3Mnl9Cf7djHDM54MZaZBRImY3AVHa4xCw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Maja Chudzik\\source\\repos\\ticketmaster_55204_51270_51373\\ConcertTracker.csproj",
+  "projectFilePath": "C:\\Users\\Maja Chudzik\\Source\\Repos\\test\\ConcertTracker.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Maja Chudzik\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\Maja Chudzik\\.nuget\\packages\\microsoft.openapi\\1.6.23\\microsoft.openapi.1.6.23.nupkg.sha512",

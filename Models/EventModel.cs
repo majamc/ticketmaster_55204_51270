@@ -6,6 +6,7 @@
     {
         /// <summary>
         /// Reprezentuje wydarzenie (np. koncert) w systemie Ticketmaster.
+        /// test
         /// </summary>
         public class EventModel
         {

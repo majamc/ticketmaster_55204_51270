@@ -474,11 +474,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Maja Chudzik\\source\\repos\\ticketmaster_55204_51270_51373\\ConcertTracker.csproj",
+      "projectUniqueName": "C:\\Users\\Maja Chudzik\\Source\\Repos\\test\\ConcertTracker.csproj",
       "projectName": "ConcertTracker",
-      "projectPath": "C:\\Users\\Maja Chudzik\\source\\repos\\ticketmaster_55204_51270_51373\\ConcertTracker.csproj",
+      "projectPath": "C:\\Users\\Maja Chudzik\\Source\\Repos\\test\\ConcertTracker.csproj",
       "packagesPath": "C:\\Users\\Maja Chudzik\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Maja Chudzik\\source\\repos\\ticketmaster_55204_51270_51373\\obj\\",
+      "outputPath": "C:\\Users\\Maja Chudzik\\Source\\Repos\\test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Maja Chudzik\\AppData\\Roaming\\NuGet\\NuGet.Config",
