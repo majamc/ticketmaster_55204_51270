@@ -1,14 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Maja Chudzik\\source\\repos\\test\\",
+  "WorkspaceRootPath": "C:\\Users\\mmalw\\source\\repos\\ticketmaster_55204_51270_51373\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1A386058-4592-4D80-903F-C76429643832}|ConcertTracker.csproj|c:\\users\\maja chudzik\\source\\repos\\test\\models\\eventmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A386058-4592-4D80-903F-C76429643832}|ConcertTracker.csproj|solutionrelative:models\\eventmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{704154D5-722D-4454-8714-36C1CC4A73A0}|Solution Items{704154D5-722D-4454-8714-36C1CC4A73A0}|C:\\Users\\mmalw\\source\\repos\\ticketmaster_55204_51270_51373\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{704154D5-722D-4454-8714-36C1CC4A73A0}|Solution Items{704154D5-722D-4454-8714-36C1CC4A73A0}|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A386058-4592-4D80-903F-C76429643832}|ConcertTracker.csproj|c:\\users\\maja chudzik\\source\\repos\\test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A386058-4592-4D80-903F-C76429643832}|ConcertTracker.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A386058-4592-4D80-903F-C76429643832}|ConcertTracker.csproj|c:\\users\\mmalw\\source\\repos\\ticketmaster_55204_51270_51373\\models\\eventmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A386058-4592-4D80-903F-C76429643832}|ConcertTracker.csproj|solutionrelative:models\\eventmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,34 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EventModel.cs",
-              "DocumentMoniker": "C:\\Users\\Maja Chudzik\\source\\repos\\test\\Models\\EventModel.cs",
-              "RelativeDocumentMoniker": "Models\\EventModel.cs",
-              "ToolTip": "C:\\Users\\Maja Chudzik\\source\\repos\\test\\Models\\EventModel.cs",
-              "RelativeToolTip": "Models\\EventModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T11:07:17.989Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Maja Chudzik\\source\\repos\\test\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Maja Chudzik\\source\\repos\\test\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T11:07:11.078Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -57,6 +31,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\mmalw\\source\\repos\\ticketmaster_55204_51270_51373\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\mmalw\\source\\repos\\ticketmaster_55204_51270_51373\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-30T14:23:10.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EventModel.cs",
+              "DocumentMoniker": "C:\\Users\\mmalw\\source\\repos\\ticketmaster_55204_51270_51373\\Models\\EventModel.cs",
+              "RelativeDocumentMoniker": "Models\\EventModel.cs",
+              "ToolTip": "C:\\Users\\mmalw\\source\\repos\\ticketmaster_55204_51270_51373\\Models\\EventModel.cs",
+              "RelativeToolTip": "Models\\EventModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T11:07:17.989Z",
+              "EditorCaption": ""
             }
           ]
         }

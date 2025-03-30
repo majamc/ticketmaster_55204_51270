@@ -1,0 +1,9 @@
+# Ignorowanie plików i folderów Visual Studio
+.vs/
+.vscode/
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+bin/
+obj/

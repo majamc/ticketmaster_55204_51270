@@ -6,22 +6,21 @@
     {
         /// <summary>
         /// Reprezentuje wydarzenie (np. koncert) w systemie Ticketmaster.
-        /// test
         /// </summary>
-        public class EventModel
+        public class EventModel //glowne dane koncertu
         {
             [JsonProperty("name")]
-            public string Name { get; set; } = string.Empty; // Nazwa zespołu / wydarzenia
+            public string Name { get; set; } = string.Empty; //nazwa zespolu/wydarzenia
 
-            public string Date { get; set; } = string.Empty; // Data koncertu
+            public string Date { get; set; } = string.Empty; //data koncertu
 
-            public string Venue { get; set; } = "Nieznana lokalizacja"; // Lokalizacja koncertu
+            public string Venue { get; set; } = "Nieznana lokalizacja"; //lokalizacja koncertu
         }
 
         /// <summary>
         /// Reprezentuje datę wydarzenia.
         /// </summary>
-        public class EventDate
+        public class EventDate //start wydarzenia
         {
             [JsonProperty("start")]
             public EventStart Start { get; set; } = new EventStart();
@@ -30,7 +29,7 @@
         /// <summary>
         /// Reprezentuje szczegóły rozpoczęcia wydarzenia.
         /// </summary>
-        public class EventStart
+        public class EventStart //data rozpoczecia
         {
             [JsonProperty("localDate")]
             public string LocalDate { get; set; } = string.Empty;
@@ -39,16 +38,16 @@
         /// <summary>
         /// Reprezentuje osadzone informacje w odpowiedzi z API, takie jak informacje o miejscach.
         /// </summary>
-        public class EventEmbedded
+        public class EventEmbedded //lista miejsc
         {
             [JsonProperty("venues")]
             public List<Venue> Venues { get; set; } = new List<Venue>();
         }
 
         /// <summary>
-        /// Reprezentuje miejsce (venue), w którym odbywa się wydarzenie.
+        /// Reprezentuje miejsce, w którym odbywa się wydarzenie.
         /// </summary>
-        public class Venue
+        public class Venue //lokalizacja wydarzenia
         {
             [JsonProperty("name")]
             public string Name { get; set; } = string.Empty;

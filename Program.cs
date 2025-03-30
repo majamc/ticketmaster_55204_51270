@@ -2,28 +2,19 @@ using ConcertTracker.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Rejestracja klienta HTTP do korzystania z us³ug, takich jak TicketmasterService
-builder.Services.AddHttpClient();
-// Rejestracja klienta HTTP dla TicketmasterService
-builder.Services.AddHttpClient<TicketmasterService>();
-// Rejestracja kontrolerów
-builder.Services.AddControllers();
+builder.Services.AddHttpClient(); //umozliwia wykonywanie zapytan HTTP przez klienta
+builder.Services.AddHttpClient<TicketmasterService>(); //rejestracja klienta HTTP dla TicketmasterService
+builder.Services.AddControllers(); //dodanie kontrolerow
 builder.Services.AddEndpointsApiExplorer();
-// Rejestracja Swaggera
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(); //swagger
 
-//builder.Services.AddAuthorization();
-// Rejestracja serwisu TicketmasterService z zakresem 'Scoped' (jeden egzemplarz na ka¿de ¿¹danie HTTP)
-//builder.Services.AddScoped<TicketmasterService>();
+var app = builder.Build(); //budowanie aplikacji
 
-var app = builder.Build();
-
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment()) //uzywanie swaggera
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-app.UseAuthorization();
-app.MapControllers();
-app.Run();
+app.MapControllers(); //endpointy
+app.Run(); //start aplikacji

@@ -12,7 +12,7 @@ namespace ConcertTracker.Controllers
     /// </summary>
 
     [ApiController]
-    [Route("api/events")]
+    [Route("api/events")] //adres bazowy
     public class EventsController : ControllerBase
     {
         private readonly TicketmasterService _ticketmasterService;
@@ -29,14 +29,13 @@ namespace ConcertTracker.Controllers
         /// <summary>
         /// Pobiera listę wydarzeń na podstawie podanego słowa kluczowego.
         /// </summary>
-        /// <param name="keyword">Słowo kluczowe do wyszukiwania wydarzeń (np. nazwa zespołu czy miasto).</param>
+        /// <param name="keyword">Słowo kluczowe do wyszukiwania wydarzeń (np. nazwa zespołu, miasto).</param>
         /// <returns>Lista wydarzeń spełniających kryteria wyszukiwania.</returns>
         [HttpGet("{keyword}")]
         public async Task<ActionResult<List<EventModel>>> GetEvents(string keyword)
         {
             var events = await _ticketmasterService.GetEventsAsync(keyword);
-            // Zwraca listę wydarzeń w formacie JSON z kodem statusu 200 OK.
-            return Ok(events);
+            return Ok(events); //zwraca liste wydarzen w formacie JSON z kodem http 200 OK
         }
     }
 }

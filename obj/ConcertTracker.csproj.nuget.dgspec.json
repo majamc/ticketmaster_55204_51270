@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Maja Chudzik\\Source\\Repos\\test\\ConcertTracker.csproj": {}
+    "C:\\Users\\mmalw\\source\\repos\\ticketmaster_55204_51270_51373\\ConcertTracker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Maja Chudzik\\Source\\Repos\\test\\ConcertTracker.csproj": {
+    "C:\\Users\\mmalw\\source\\repos\\ticketmaster_55204_51270_51373\\ConcertTracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Maja Chudzik\\Source\\Repos\\test\\ConcertTracker.csproj",
+        "projectUniqueName": "C:\\Users\\mmalw\\source\\repos\\ticketmaster_55204_51270_51373\\ConcertTracker.csproj",
         "projectName": "ConcertTracker",
-        "projectPath": "C:\\Users\\Maja Chudzik\\Source\\Repos\\test\\ConcertTracker.csproj",
-        "packagesPath": "C:\\Users\\Maja Chudzik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Maja Chudzik\\Source\\Repos\\test\\obj\\",
+        "projectPath": "C:\\Users\\mmalw\\source\\repos\\ticketmaster_55204_51270_51373\\ConcertTracker.csproj",
+        "packagesPath": "C:\\Users\\mmalw\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mmalw\\source\\repos\\ticketmaster_55204_51270_51373\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Maja Chudzik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mmalw\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
