@@ -48,10 +48,10 @@ namespace ConcertTracker.Services
             {
                 Name = e.name.ToString(),
                 Date = e.dates.start.localDate.ToString(),
-                // Lokalizacja wydarzenia (sprawdzamy, czy są dostępne dane o miejscach)
+                // Lokalizacja wydarzenia (sprawdzamy, czy są dostępne dane o miejscach oraz podajemy miasto)
                 Venue = e._embedded?.venues != null && e._embedded.venues.HasValues
-                    ? e._embedded.venues[0].name.ToString()
-                    : "Nieznana lokalizacja"
+                    ? e._embedded.venues[0].name.ToString() + ", " + e._embedded.venues[0].city?.name?.ToString()
+                    : "Nieznana lokalizacja",
             }).ToList();
 
             return filteredEvents;
