@@ -15,18 +15,14 @@ builder.Services.AddSwaggerGen();
 // Rejestracja klienta HTTP dla SetList
 builder.Services.AddHttpClient<SetlistFmService>();
 
-//builder.Services.AddAuthorization();
-// Rejestracja serwisu TicketmasterService z zakresem 'Scoped' (jeden egzemplarz na ka¿de ¿¹danie HTTP)
-//builder.Services.AddScoped<TicketmasterService>();
-
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
+    app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-app.UseAuthorization();
 app.MapControllers();
 app.Run();

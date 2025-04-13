@@ -40,6 +40,13 @@ namespace ConcertTracker.Controllers
         {
             // Pobierz wydarzenia pasujące do słowa kluczowego z Ticketmaster
             var events = await _ticketmasterService.GetEventsAsync(keyword);
+
+            // Sprawdzenie, czy API zwróciło wydarzenia
+            if (events == null || !events.Any())
+            {
+                return NotFound("Brak wydarzeń dla podanego słowa kluczowego.");
+            }
+
             var result = new List<EventWithSongsResponse>();
 
             // Iteruj przez każde wydarzenie
@@ -53,7 +60,7 @@ namespace ConcertTracker.Controllers
                     // Jeśli brak wyników – ustaw pustą listę
                     if (songs == null || !songs.Any())
                     {
-                        songs = new List<string>();
+                        songs = new List<string> { "Brak danych o piosenkach" };
                     }
 
                     // Dodaj wydarzenie z przypisanymi piosenkami do listy wynikowej
@@ -73,7 +80,7 @@ namespace ConcertTracker.Controllers
                         Name = ev.Name,
                         Date = ev.Date,
                         Venue = ev.Venue,
-                        TopSongs = new List<string> { "Brak danych o piosenkach" }
+                        TopSongs = new List<string> { "Błąd podczas pobierania piosenek: " + ex.Message }
                     });
                 }
             }
