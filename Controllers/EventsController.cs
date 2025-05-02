@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using ConcertTracker.Models;
 using ConcertTracker.Models.TicketmasterAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ConcertTracker.Controllers
 {
@@ -11,6 +12,7 @@ namespace ConcertTracker.Controllers
     /// Kontroler obsługujący żądania związane z wydarzeniami z TicketmasterApi.
     /// </summary>
 
+    [Authorize] //nie jestem pewna czy to jest potrzbne????
     [ApiController]
     [Route("api/events")] //adres bazowy
     public class EventsController : ControllerBase

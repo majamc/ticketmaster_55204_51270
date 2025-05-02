@@ -1,32 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{1A386058-4592-4D80-903F-C76429643832}|ConcertTracker.csproj|c:\\users\\mmalw\\source\\repos\\ticketmaster update\\services\\ticketmasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A386058-4592-4D80-903F-C76429643832}|ConcertTracker.csproj|solutionrelative:services\\ticketmasterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A386058-4592-4D80-903F-C76429643832}|ConcertTracker.csproj|c:\\users\\mmalw\\source\\repos\\ticketmaster update\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A386058-4592-4D80-903F-C76429643832}|ConcertTracker.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A386058-4592-4D80-903F-C76429643832}|ConcertTracker.csproj|c:\\users\\mmalw\\source\\repos\\ticketmaster update\\services\\setlistfmservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A386058-4592-4D80-903F-C76429643832}|ConcertTracker.csproj|solutionrelative:services\\setlistfmservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A386058-4592-4D80-903F-C76429643832}|ConcertTracker.csproj|c:\\users\\mmalw\\source\\repos\\ticketmaster update\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A386058-4592-4D80-903F-C76429643832}|ConcertTracker.csproj|solutionrelative:controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A386058-4592-4D80-903F-C76429643832}|ConcertTracker.csproj|c:\\users\\mmalw\\source\\repos\\ticketmaster update\\models\\setlistsongstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A386058-4592-4D80-903F-C76429643832}|ConcertTracker.csproj|solutionrelative:models\\setlistsongstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A386058-4592-4D80-903F-C76429643832}|ConcertTracker.csproj|c:\\users\\mmalw\\source\\repos\\ticketmaster update\\models\\eventwithsongresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A386058-4592-4D80-903F-C76429643832}|ConcertTracker.csproj|solutionrelative:models\\eventwithsongresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -34,86 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TicketmasterService.cs",
-              "DocumentMoniker": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\Services\\TicketmasterService.cs",
-              "RelativeDocumentMoniker": "Services\\TicketmasterService.cs",
-              "ToolTip": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\Services\\TicketmasterService.cs",
-              "RelativeToolTip": "Services\\TicketmasterService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADUAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T12:03:03.731Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T11:51:21.817Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SetlistSongStats.cs",
-              "DocumentMoniker": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\Models\\SetlistSongStats.cs",
-              "RelativeDocumentMoniker": "Models\\SetlistSongStats.cs",
-              "ToolTip": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\Models\\SetlistSongStats.cs",
-              "RelativeToolTip": "Models\\SetlistSongStats.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T11:48:32.991Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EventWithSongResponse.cs",
-              "DocumentMoniker": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\Models\\EventWithSongResponse.cs",
-              "RelativeDocumentMoniker": "Models\\EventWithSongResponse.cs",
-              "ToolTip": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\Models\\EventWithSongResponse.cs",
-              "RelativeToolTip": "Models\\EventWithSongResponse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T11:47:10.989Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SetlistFmService.cs",
-              "DocumentMoniker": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\Services\\SetlistFmService.cs",
-              "RelativeDocumentMoniker": "Services\\SetlistFmService.cs",
-              "ToolTip": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\Services\\SetlistFmService.cs",
-              "RelativeToolTip": "Services\\SetlistFmService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFsAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T11:40:53.775Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EventsController.cs",
-              "DocumentMoniker": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\Controllers\\EventsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\EventsController.cs",
-              "ToolTip": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\Controllers\\EventsController.cs",
-              "RelativeToolTip": "Controllers\\EventsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T11:38:32.601Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
