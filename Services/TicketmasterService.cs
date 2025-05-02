@@ -49,9 +49,9 @@ namespace ConcertTracker.Services
             {
                 Name = e.name.ToString(),
                 Date = e.dates.start.localDate.ToString(),
-                Venue = e._embedded?.venues != null && e._embedded.venues.HasValues //sprawdzenie czy zwrocono lokalizacje 
-                    ? e._embedded.venues[0].name.ToString()
-                    : "Nieznana lokalizacja"
+                Venue = (e._embedded?.venues != null && e._embedded.venues.Count > 0 && e._embedded.venues[0] != null)
+                    ? e._embedded.venues[0].name?.ToString() + ", " + e._embedded.venues[0].city?.name?.ToString()
+                    : "Nieznana lokalizacja",
             }).ToList();
 
             return filteredEvents; //zwrocenie listy koncertow

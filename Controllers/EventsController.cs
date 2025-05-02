@@ -17,25 +17,76 @@ namespace ConcertTracker.Controllers
     {
         private readonly TicketmasterService _ticketmasterService;
 
+        // Serwis do pobierania topowych piosenek artysty z Setlist.fm
+        private readonly SetlistFmService _setlistFmService;
+
         /// <summary>
-        /// Konstruktor kontrolera, który przyjmuje serwis Ticketmaster.
+        /// Konstruktor kontrolera, wstrzykujący zależności serwisów Ticketmaster i Setlist.fm.
         /// </summary>
-        /// <param name="ticketmasterService">Serwis odpowiedzialny za pobieranie wydarzeń z Ticketmaster.</param>
-        public EventsController(TicketmasterService ticketmasterService)
+        public EventsController(TicketmasterService ticketmasterService, SetlistFmService setlistFmService)
         {
             _ticketmasterService = ticketmasterService;
+            _setlistFmService = setlistFmService;
         }
 
         /// <summary>
-        /// Pobiera listę wydarzeń na podstawie podanego słowa kluczowego.
+        /// Endpoint zwracający listę wydarzeń na podstawie słowa kluczowego (np. nazwa zespołu, miasto),
+        /// wraz z 3 najpopularniejszymi piosenkami artysty (jeśli dostępne).
         /// </summary>
-        /// <param name="keyword">Słowo kluczowe do wyszukiwania wydarzeń (np. nazwa zespołu, miasto).</param>
-        /// <returns>Lista wydarzeń spełniających kryteria wyszukiwania.</returns>
+        /// <param name="keyword">Słowo kluczowe do wyszukania wydarzeń.</param>
+        /// <returns>Lista wydarzeń z przypisanymi piosenkami.</returns>
         [HttpGet("{keyword}")]
-        public async Task<ActionResult<List<EventModel>>> GetEvents(string keyword)
+        public async Task<ActionResult<List<EventWithSongsResponse>>> GetEventsWithSongs(string keyword)
         {
+            // Pobierz wydarzenia pasujące do słowa kluczowego z Ticketmaster
             var events = await _ticketmasterService.GetEventsAsync(keyword);
-            return Ok(events); //zwraca liste wydarzen w formacie JSON z kodem http 200 OK
+
+            // Sprawdzenie, czy API zwróciło wydarzenia
+            if (events == null || !events.Any())
+            {
+                return NotFound("Brak wydarzeń dla podanego słowa kluczowego.");
+            }
+
+            var result = new List<EventWithSongsResponse>();
+
+            // Iteruj przez każde wydarzenie
+            foreach (var ev in events)
+            {
+                try
+                {
+                    // Pobierz listę topowych piosenek dla artysty (na podstawie nazwy wydarzenia)
+                    var songs = await _setlistFmService.GetTopSongsAsync(ev.Name);
+
+                    // Jeśli brak wyników – ustaw pustą listę
+                    if (songs == null || !songs.Any())
+                    {
+                        songs = new List<string> { "Brak danych o piosenkach" };
+                    }
+
+                    // Dodaj wydarzenie z przypisanymi piosenkami do listy wynikowej
+                    result.Add(new EventWithSongsResponse
+                    {
+                        Name = ev.Name,
+                        Date = ev.Date,
+                        Venue = ev.Venue,
+                        TopSongs = songs
+                    });
+                }
+                catch (Exception ex)
+                {
+                    // Obsługa błędu – jeżeli nie udało się pobrać piosenek, dodaj komunikat zastępczy
+                    result.Add(new EventWithSongsResponse
+                    {
+                        Name = ev.Name,
+                        Date = ev.Date,
+                        Venue = ev.Venue,
+                        TopSongs = new List<string> { "Błąd podczas pobierania piosenek: " + ex.Message }
+                    });
+                }
+            }
+
+            // Zwróć gotową listę wydarzeń z przypisanymi piosenkami
+            return Ok(result);
         }
     }
 }

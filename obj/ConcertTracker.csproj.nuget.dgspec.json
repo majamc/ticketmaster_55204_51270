@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mmalw\\source\\repos\\ticketmaster_55204_51270_51373\\ConcertTracker.csproj": {}
+    "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\ConcertTracker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mmalw\\source\\repos\\ticketmaster_55204_51270_51373\\ConcertTracker.csproj": {
+    "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\ConcertTracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mmalw\\source\\repos\\ticketmaster_55204_51270_51373\\ConcertTracker.csproj",
+        "projectUniqueName": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\ConcertTracker.csproj",
         "projectName": "ConcertTracker",
-        "projectPath": "C:\\Users\\mmalw\\source\\repos\\ticketmaster_55204_51270_51373\\ConcertTracker.csproj",
+        "projectPath": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\ConcertTracker.csproj",
         "packagesPath": "C:\\Users\\mmalw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mmalw\\source\\repos\\ticketmaster_55204_51270_51373\\obj\\",
+        "outputPath": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mmalw\\AppData\\Roaming\\NuGet\\NuGet.Config",

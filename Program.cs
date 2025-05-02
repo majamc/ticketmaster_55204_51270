@@ -8,10 +8,13 @@ builder.Services.AddControllers(); //dodanie kontrolerow
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(); //swagger
 
+builder.Services.AddHttpClient<SetlistFmService>();
+
 var app = builder.Build(); //budowanie aplikacji
 
-if (app.Environment.IsDevelopment()) //uzywanie swaggera
+if (app.Environment.IsDevelopment())
 {
+    app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();
 }

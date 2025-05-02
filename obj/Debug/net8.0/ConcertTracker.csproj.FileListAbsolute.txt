@@ -99,3 +99,37 @@ C:\Users\mmalw\Source\Repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\refi
 C:\Users\mmalw\Source\Repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\ConcertTracker.pdb
 C:\Users\mmalw\Source\Repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\ConcertTracker.genruntimeconfig.cache
 C:\Users\mmalw\Source\Repos\ticketmaster_55204_51270_51373\obj\Debug\net8.0\ref\ConcertTracker.dll
+C:\Users\mmalw\source\repos\ticketmaster update\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\mmalw\source\repos\ticketmaster update\bin\Debug\net8.0\appsettings.json
+C:\Users\mmalw\source\repos\ticketmaster update\bin\Debug\net8.0\ConcertTracker.exe
+C:\Users\mmalw\source\repos\ticketmaster update\bin\Debug\net8.0\ConcertTracker.deps.json
+C:\Users\mmalw\source\repos\ticketmaster update\bin\Debug\net8.0\ConcertTracker.runtimeconfig.json
+C:\Users\mmalw\source\repos\ticketmaster update\bin\Debug\net8.0\ConcertTracker.dll
+C:\Users\mmalw\source\repos\ticketmaster update\bin\Debug\net8.0\ConcertTracker.pdb
+C:\Users\mmalw\source\repos\ticketmaster update\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\mmalw\source\repos\ticketmaster update\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\mmalw\source\repos\ticketmaster update\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\mmalw\source\repos\ticketmaster update\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\mmalw\source\repos\ticketmaster update\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\mmalw\source\repos\ticketmaster update\obj\Debug\net8.0\ConcertTracker.csproj.AssemblyReference.cache
+C:\Users\mmalw\source\repos\ticketmaster update\obj\Debug\net8.0\ConcertTracker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mmalw\source\repos\ticketmaster update\obj\Debug\net8.0\ConcertTracker.AssemblyInfoInputs.cache
+C:\Users\mmalw\source\repos\ticketmaster update\obj\Debug\net8.0\ConcertTracker.AssemblyInfo.cs
+C:\Users\mmalw\source\repos\ticketmaster update\obj\Debug\net8.0\ConcertTracker.csproj.CoreCompileInputs.cache
+C:\Users\mmalw\source\repos\ticketmaster update\obj\Debug\net8.0\ConcertTracker.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\mmalw\source\repos\ticketmaster update\obj\Debug\net8.0\ConcertTracker.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\mmalw\source\repos\ticketmaster update\obj\Debug\net8.0\ConcertTracker.sourcelink.json
+C:\Users\mmalw\source\repos\ticketmaster update\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\mmalw\source\repos\ticketmaster update\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\mmalw\source\repos\ticketmaster update\obj\Debug\net8.0\staticwebassets\msbuild.ConcertTracker.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\mmalw\source\repos\ticketmaster update\obj\Debug\net8.0\staticwebassets\msbuild.build.ConcertTracker.props
+C:\Users\mmalw\source\repos\ticketmaster update\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ConcertTracker.props
+C:\Users\mmalw\source\repos\ticketmaster update\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ConcertTracker.props
+C:\Users\mmalw\source\repos\ticketmaster update\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\mmalw\source\repos\ticketmaster update\obj\Debug\net8.0\scopedcss\bundle\ConcertTracker.styles.css
+C:\Users\mmalw\source\repos\ticketmaster update\obj\Debug\net8.0\ConcertT.2EA5061D.Up2Date
+C:\Users\mmalw\source\repos\ticketmaster update\obj\Debug\net8.0\ConcertTracker.dll
+C:\Users\mmalw\source\repos\ticketmaster update\obj\Debug\net8.0\refint\ConcertTracker.dll
+C:\Users\mmalw\source\repos\ticketmaster update\obj\Debug\net8.0\ConcertTracker.pdb
+C:\Users\mmalw\source\repos\ticketmaster update\obj\Debug\net8.0\ConcertTracker.genruntimeconfig.cache
+C:\Users\mmalw\source\repos\ticketmaster update\obj\Debug\net8.0\ref\ConcertTracker.dll

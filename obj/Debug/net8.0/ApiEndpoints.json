@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "ConcertTracker.Controllers.EventsController",
-    "Method": "GetEvents",
+    "Method": "GetEventsWithSongs",
     "RelativePath": "api/events/{keyword}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -15,7 +15,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[ConcertTracker.Models.TicketmasterAPI.Models.EventModel, ConcertTracker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[ConcertTracker.Models.EventWithSongsResponse, ConcertTracker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
