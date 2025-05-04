@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Data",
+    "\\Models",
+    "\\Properties",
     "\\Services"
   ],
-  "SelectedNode": "\\Services",
+  "SelectedNode": "\\Models\\ApplicationUser.cs",
   "PreviewInSolutionExplorer": false
 }

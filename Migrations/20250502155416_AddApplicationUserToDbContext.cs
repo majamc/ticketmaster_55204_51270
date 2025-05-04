@@ -13,7 +13,7 @@ namespace ConcertTracker.Migrations
             migrationBuilder.AddColumn<string>(
                 name: "Discriminator",
                 table: "AspNetUsers",
-                type: "nvarchar(21)",
+                type: "TEXT",
                 maxLength: 21,
                 nullable: false,
                 defaultValue: "");
