@@ -11,7 +11,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddHttpClient(); //umozliwia wykonywanie zapytan HTTP przez klienta
 builder.Services.AddHttpClient<TicketmasterService>(); //rejestracja klienta HTTP dla TicketmasterService
-builder.Services.AddControllers(); //dodanie kontrolerow
+//builder.Services.AddControllers(); //dodanie kontrolerow
+builder.Services.AddControllers()
+    .ConfigureApiBehaviorOptions(options =>
+    {
+        options.SuppressModelStateInvalidFilter = true;
+    });
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -56,5 +61,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseAuthentication(); //autentykacja
 app.UseAuthorization(); //autoryzacja
+
+app.UseMiddleware<ConcertTracker.Middlewares.ExceptionMiddleware>();
+
 app.MapControllers();
 app.Run(); //start aplikacji

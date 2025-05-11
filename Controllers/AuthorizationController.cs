@@ -20,23 +20,65 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("register")] //POST /api/auth/register
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status409Conflict)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     public async Task<IActionResult> Register([FromBody] RegisterRequest request)
     {
-        var user = new ApplicationUser { UserName = request.Email, Email = request.Email }; //tworzeni uzytkownika z emailem jako loginem
-        var result = await _userManager.CreateAsync(user, request.Password); //tworzenie uzytkownika i haslo
+        if (!ModelState.IsValid)
+        {
+            throw new BadRequestException("Nieprawidlowe dane wejsciowe.");
+        }
 
-        if (!result.Succeeded) //jesli sie nie uda to zwraca blad
-            return BadRequest(result.Errors);
+        if (string.IsNullOrWhiteSpace(request.Email))
+            throw new BadRequestException("Email nie moze byc pusty.");
+
+        if (!request.Email.Contains("@"))
+            throw new BadRequestException("Niepoprawny adres email.");
+
+        if (string.IsNullOrWhiteSpace(request.Password))
+            throw new BadRequestException("Haslo nie moze byc puste.");
+
+        if (!request.Password.Any(char.IsUpper))
+            throw new BadRequestException("Haslo musi zawierac co najmniej jedna wielka litera.");
+
+        if (!request.Password.Any(char.IsDigit))
+            throw new BadRequestException("Haslo musi zawierac co najmniej jedna cyfre.");
+
+        if (!request.Password.Any(c => "!@#$%^&*()_+-=[]{};':\",.<>/?\\|".Contains(c)))
+            throw new BadRequestException("Haslo musi zawierac znak specjalny.");
+
+        var existingUser = await _userManager.FindByEmailAsync(request.Email); 
+        if (existingUser != null)
+            throw new ConflictException("Uzytkownik z takim adresem email juz istnieje.");
+        //^ to ma zwracac 409 ale zwaraca 400 nwm dlaczego moze to przez swagger wiec potem to naprawie
+
+        var user = new ApplicationUser { UserName = request.Email, Email = request.Email }; //tworzenie uzytkownika z emailem jako loginem
+        var result = await _userManager.CreateAsync(user, request.Password); //tworzenie uzytkownika i haslo
 
         return Ok("Rejestracja udana");
     }
 
     [HttpPost("login")] //POST /api/auth/login
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status409Conflict)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     public async Task<IActionResult> Login([FromBody] LoginRequest request)
     {
+        if (string.IsNullOrWhiteSpace(request.Email))
+            throw new BadRequestException("Email nie moze byc pusty.");
+
+        if (string.IsNullOrWhiteSpace(request.Password))
+            throw new BadRequestException("Haslo nie moze byc puste.");
+
         var user = await _userManager.FindByEmailAsync(request.Email); //szukanie usera po emailu
         if (user == null || !await _userManager.CheckPasswordAsync(user, request.Password)) //sprawdzenie czy haslo sie zgadza
-            return Unauthorized("Nieprawid?owe dane logowania");
+            throw new UnauthorizedException("Nieprawidlowe dane logowania");
 
         var token = GenerateJwtToken(user); //jesli dane sa poprawne to generuje sie token JWT
         return Ok(new { token });

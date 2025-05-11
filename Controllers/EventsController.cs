@@ -12,7 +12,8 @@ namespace ConcertTracker.Controllers
     /// Kontroler obsługujący żądania związane z wydarzeniami z TicketmasterApi.
     /// </summary>
 
-    [Authorize] //nie jestem pewna czy to jest potrzbne????
+    //[AllowAnonymous] //zmienic potem na [Authorize] 
+    [Authorize]
     [ApiController]
     [Route("api/events")] //adres bazowy
     public class EventsController : ControllerBase
@@ -38,15 +39,21 @@ namespace ConcertTracker.Controllers
         /// <param name="keyword">Słowo kluczowe do wyszukania wydarzeń.</param>
         /// <returns>Lista wydarzeń z przypisanymi piosenkami.</returns>
         [HttpGet("{keyword}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<List<EventWithSongsResponse>>> GetEventsWithSongs(string keyword)
         {
+            if (string.IsNullOrWhiteSpace(keyword))
+                throw new BadRequestException("Pole nie może być puste.");
+
             // Pobierz wydarzenia pasujące do słowa kluczowego z Ticketmaster
             var events = await _ticketmasterService.GetEventsAsync(keyword);
 
             // Sprawdzenie, czy API zwróciło wydarzenia
             if (events == null || !events.Any())
             {
-                return NotFound("Brak wydarzeń dla podanego słowa kluczowego.");
+                throw new NotFoundException("Brak wydarzeń dla podanego słowa kluczowego.");
             }
 
             var result = new List<EventWithSongsResponse>();
