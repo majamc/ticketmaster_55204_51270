@@ -8,11 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace ConcertTracker.Controllers
 {
-    /// <summary>
-    /// Kontroler obsługujący żądania związane z wydarzeniami z TicketmasterApi.
-    /// </summary>
-
-    //[AllowAnonymous] 
+    // Kontroler obsługujący żądania związane z wydarzeniami z TicketmasterApi.
     [Authorize]
     [ApiController]
     [Route("api/events")] //adres bazowy
@@ -23,21 +19,15 @@ namespace ConcertTracker.Controllers
         // Serwis do pobierania topowych piosenek artysty z Setlist.fm
         private readonly SetlistFmService _setlistFmService;
 
-        /// <summary>
-        /// Konstruktor kontrolera, wstrzykujący zależności serwisów Ticketmaster i Setlist.fm.
-        /// </summary>
+        // Konstruktor kontrolera, wstrzykujący zależności serwisów Ticketmaster i Setlist.fm.
         public EventsController(TicketmasterService ticketmasterService, SetlistFmService setlistFmService)
         {
             _ticketmasterService = ticketmasterService;
             _setlistFmService = setlistFmService;
         }
 
-        /// <summary>
-        /// Endpoint zwracający listę wydarzeń na podstawie słowa kluczowego (np. nazwa zespołu, miasto),
-        /// wraz z 3 najpopularniejszymi piosenkami artysty (jeśli dostępne).
-        /// </summary>
-        /// <param name="keyword">Słowo kluczowe do wyszukania wydarzeń.</param>
-        /// <returns>Lista wydarzeń z przypisanymi piosenkami.</returns>
+        // Endpoint zwracający listę wydarzeń na podstawie słowa kluczowego (np. nazwa zespołu, miasto),
+        // wraz z 3 najpopularniejszymi piosenkami artysty (jeśli dostępne).
         [HttpGet("{keyword}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -45,7 +35,7 @@ namespace ConcertTracker.Controllers
         public async Task<ActionResult<List<EventWithSongsResponse>>> GetEventsWithSongs(string keyword)
         {
             if (string.IsNullOrWhiteSpace(keyword))
-                throw new BadRequestException("Pole nie może być puste.");
+                throw new BadRequestException("Enter a artist/band name");
 
             // Pobierz wydarzenia pasujące do słowa kluczowego z Ticketmaster
             var events = await _ticketmasterService.GetEventsAsync(keyword);
@@ -53,7 +43,7 @@ namespace ConcertTracker.Controllers
             // Sprawdzenie, czy API zwróciło wydarzenia
             if (events == null || !events.Any())
             {
-                throw new NotFoundException("Brak wydarzeń dla podanego słowa kluczowego.");
+                throw new NotFoundException("No concerts for that artist/band.");
             }
 
             var result = new List<EventWithSongsResponse>();
@@ -69,7 +59,7 @@ namespace ConcertTracker.Controllers
                     // Jeśli brak wyników – ustaw pustą listę
                     if (songs == null || !songs.Any())
                     {
-                        songs = new List<string> { "Brak danych o piosenkach" };
+                        songs = new List<string> { "No data about top songs" };
                     }
 
                     // Dodaj wydarzenie z przypisanymi piosenkami do listy wynikowej
@@ -89,7 +79,7 @@ namespace ConcertTracker.Controllers
                         Name = ev.Name,
                         Date = ev.Date,
                         Venue = ev.Venue,
-                        TopSongs = new List<string> { "Błąd podczas pobierania piosenek: " + ex.Message }
+                        TopSongs = new List<string> { "Error while loading songs: " + ex.Message }
                     });
                 }
             }

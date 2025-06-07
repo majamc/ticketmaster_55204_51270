@@ -23,12 +23,12 @@ namespace ConcertTracker.Middlewares
             }
             catch (Exception ex) //jesli wystapi wyjatek
             {
-                _logger.LogError(ex, "Wyst?pi? wyj?tek"); //logowanie wyjatku
+                _logger.LogError(ex, "An error occurred"); //logowanie wyjatku
 
                 context.Response.ContentType = "application/json";
                 //500 to bedzie domyslny blad
                 HttpStatusCode statusCode = HttpStatusCode.InternalServerError; //jesli nie przwidzimy jakiegos bledu ty bedzie blad 500
-                string message = "Wewn?trzny b??d serwera";
+                string message = "Internal server error";
 
                 switch (ex)
                 {

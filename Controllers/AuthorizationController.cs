@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -28,36 +28,38 @@ public class AuthController : ControllerBase
     {
         if (!ModelState.IsValid)
         {
-            throw new BadRequestException("Nieprawidlowe dane wejsciowe.");
+            throw new BadRequestException("Invalid data."); //nieprawidlowe dane wejsciowe
         }
 
         if (string.IsNullOrWhiteSpace(request.Email))
-            throw new BadRequestException("Email nie moze byc pusty.");
+            throw new BadRequestException("Please enter your email.");
 
         if (!request.Email.Contains("@"))
-            throw new BadRequestException("Niepoprawny adres email.");
+            throw new BadRequestException("Please enter a valid email.");
 
         if (string.IsNullOrWhiteSpace(request.Password))
-            throw new BadRequestException("Haslo nie moze byc puste.");
+            throw new BadRequestException("Please enter your password.");
 
         if (!request.Password.Any(char.IsUpper))
-            throw new BadRequestException("Haslo musi zawierac co najmniej jedna wielka litera.");
+            throw new BadRequestException("Password must contain at least one uppercase letter.");
 
         if (!request.Password.Any(char.IsDigit))
-            throw new BadRequestException("Haslo musi zawierac co najmniej jedna cyfre.");
+            throw new BadRequestException("Password must contain at least one digit.");
+
+        if (request.Password.Length < 8)
+            throw new BadRequestException("Password has to be at least 8 characters long.");
 
         if (!request.Password.Any(c => "!@#$%^&*()_+-=[]{};':\",.<>/?\\|".Contains(c)))
-            throw new BadRequestException("Haslo musi zawierac znak specjalny.");
+            throw new BadRequestException("Password must contain at least one special character.");
 
         var existingUser = await _userManager.FindByEmailAsync(request.Email); 
         if (existingUser != null)
-            throw new ConflictException("Uzytkownik z takim adresem email juz istnieje.");
-        //^ to ma zwracac 409 ale zwaraca 400 nwm dlaczego moze to przez swagger wiec potem to naprawie
+            throw new ConflictException("Email taken.");
 
         var user = new ApplicationUser { UserName = request.Email, Email = request.Email }; //tworzenie uzytkownika z emailem jako loginem
         var result = await _userManager.CreateAsync(user, request.Password); //tworzenie uzytkownika i haslo
 
-        return Ok("Rejestracja udana");
+        return Ok("Registration succesful");
     }
 
     [HttpPost("login")] //POST /api/auth/login
@@ -71,14 +73,17 @@ public class AuthController : ControllerBase
     public async Task<IActionResult> Login([FromBody] LoginRequest request)
     {
         if (string.IsNullOrWhiteSpace(request.Email))
-            throw new BadRequestException("Email nie moze byc pusty.");
+            throw new BadRequestException("Please enter your email.");
 
         if (string.IsNullOrWhiteSpace(request.Password))
-            throw new BadRequestException("Haslo nie moze byc puste.");
+            throw new BadRequestException("Please enter your password.");
+
+        if (!request.Email.Contains("@"))
+            throw new BadRequestException("Please enter a valid email.");
 
         var user = await _userManager.FindByEmailAsync(request.Email); //szukanie usera po emailu
         if (user == null || !await _userManager.CheckPasswordAsync(user, request.Password)) //sprawdzenie czy haslo sie zgadza
-            throw new UnauthorizedException("Nieprawidlowe dane logowania");
+            throw new UnauthorizedException("Incorrect email or password");
 
         var token = GenerateJwtToken(user); //jesli dane sa poprawne to generuje sie token JWT
         return Ok(new { token });

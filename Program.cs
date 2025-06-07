@@ -1,4 +1,4 @@
-using ConcertTracker.Services;
+﻿using ConcertTracker.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -9,9 +9,18 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 builder.Services.AddHttpClient(); //umozliwia wykonywanie zapytan HTTP przez klienta
 builder.Services.AddHttpClient<TicketmasterService>(); //rejestracja klienta HTTP dla TicketmasterService
-//builder.Services.AddControllers(); //dodanie kontrolerow
 builder.Services.AddControllers()
     .ConfigureApiBehaviorOptions(options =>
     {
@@ -58,6 +67,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseDefaultFiles(); //wyszukuje pliki html
+app.UseStaticFiles();  //obsluga plikow do frondenda z wwwroot
+
+app.UseCors("AllowAll");
 
 app.UseAuthentication(); //autentykacja
 app.UseAuthorization(); //autoryzacja

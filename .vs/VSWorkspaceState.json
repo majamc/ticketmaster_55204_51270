@@ -3,10 +3,10 @@
     "",
     "\\Controllers",
     "\\Exceptions",
-    "\\middlewares",
+    "\\Middlewares",
     "\\Models",
     "\\Services"
   ],
-  "SelectedNode": "\\appsettings.json",
+  "SelectedNode": "\\concerttracker.db",
   "PreviewInSolutionExplorer": false
 }

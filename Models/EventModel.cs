@@ -14,7 +14,7 @@
 
             public string Date { get; set; } = string.Empty; //data koncertu
 
-            public string Venue { get; set; } = "Nieznana lokalizacja"; //lokalizacja koncertu
+            public string Venue { get; set; } = "Venue unknown"; //lokalizacja koncertu
         }
 
         /// <summary>
