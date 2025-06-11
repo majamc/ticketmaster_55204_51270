@@ -8,7 +8,7 @@
 
 ### Użyte zewnętrzne API
 - **ticketmaster** - do zbierania danych o przyszłych koncertach wybranego artysty
-- **statsfm** - do zbierania 3 topowych piosenek granych na koncertach
+- **spotify** - do zbierania 5 topowych piosenek granych na koncertach
 
 ### Instrukcja odpalenia aplikacji
 1. Zklonuj repozytorium https://github.com/majamc/ticketmaster_55204_51270_51373 //potem zmienic nazwe
