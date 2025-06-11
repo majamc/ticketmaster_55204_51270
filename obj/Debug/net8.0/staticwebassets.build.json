@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nv1kwEH9EFdh8I8JAYWCkww4e96s4ed0YAf0BW7xYYA=",
+  "Hash": "2UNlQxe0Z0bAQeEL8p4WylkERbwy8EuNOxpXjv4VF78=",
   "Source": "ConcertTracker",
   "BasePath": "_content/ConcertTracker",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ConcertTracker\\wwwroot",
       "Source": "ConcertTracker",
-      "ContentRoot": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Maja Chudzik\\Source\\Repos\\ticketmaster_git\\wwwroot\\",
       "BasePath": "_content/ConcertTracker",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\wwwroot\\concerts.html",
+      "Identity": "C:\\Users\\Maja Chudzik\\Source\\Repos\\ticketmaster_git\\wwwroot\\concerts.html",
       "SourceId": "ConcertTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Maja Chudzik\\Source\\Repos\\ticketmaster_git\\wwwroot\\",
       "BasePath": "_content/ConcertTracker",
       "RelativePath": "concerts.html",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\concerts.html"
     },
     {
-      "Identity": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\Maja Chudzik\\Source\\Repos\\ticketmaster_git\\wwwroot\\index.html",
       "SourceId": "ConcertTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Maja Chudzik\\Source\\Repos\\ticketmaster_git\\wwwroot\\",
       "BasePath": "_content/ConcertTracker",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\wwwroot\\register.html",
+      "Identity": "C:\\Users\\Maja Chudzik\\Source\\Repos\\ticketmaster_git\\wwwroot\\register.html",
       "SourceId": "ConcertTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Maja Chudzik\\Source\\Repos\\ticketmaster_git\\wwwroot\\",
       "BasePath": "_content/ConcertTracker",
       "RelativePath": "register.html",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\register.html"
     },
     {
-      "Identity": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\wwwroot\\script.js",
+      "Identity": "C:\\Users\\Maja Chudzik\\Source\\Repos\\ticketmaster_git\\wwwroot\\script.js",
       "SourceId": "ConcertTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Maja Chudzik\\Source\\Repos\\ticketmaster_git\\wwwroot\\",
       "BasePath": "_content/ConcertTracker",
       "RelativePath": "script.js",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\script.js"
     },
     {
-      "Identity": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\wwwroot\\styles.css",
+      "Identity": "C:\\Users\\Maja Chudzik\\Source\\Repos\\ticketmaster_git\\wwwroot\\styles.css",
       "SourceId": "ConcertTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Maja Chudzik\\Source\\Repos\\ticketmaster_git\\wwwroot\\",
       "BasePath": "_content/ConcertTracker",
       "RelativePath": "styles.css",
       "AssetKind": "All",

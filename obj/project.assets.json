@@ -5407,19 +5407,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mmalw\\.nuget\\packages\\": {}
+    "C:\\Users\\Maja Chudzik\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\ConcertTracker.csproj",
+      "projectUniqueName": "C:\\Users\\Maja Chudzik\\Source\\Repos\\ticketmaster_git\\ConcertTracker.csproj",
       "projectName": "ConcertTracker",
-      "projectPath": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\ConcertTracker.csproj",
-      "packagesPath": "C:\\Users\\mmalw\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\obj\\",
+      "projectPath": "C:\\Users\\Maja Chudzik\\Source\\Repos\\ticketmaster_git\\ConcertTracker.csproj",
+      "packagesPath": "C:\\Users\\Maja Chudzik\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Maja Chudzik\\Source\\Repos\\ticketmaster_git\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mmalw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Maja Chudzik\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

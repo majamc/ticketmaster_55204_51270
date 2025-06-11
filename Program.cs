@@ -57,7 +57,7 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(); //swagger
 
-builder.Services.AddHttpClient<SetlistFmService>();
+builder.Services.AddHttpClient<SpotifyService>();
 
 var app = builder.Build(); //budowanie aplikacji
 

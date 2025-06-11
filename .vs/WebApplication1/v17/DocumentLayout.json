@@ -1,7 +1,20 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\mmalw\\source\\repos\\ticketmaster update\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Maja Chudzik\\source\\repos\\ticketmaster_git\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1A386058-4592-4D80-903F-C76429643832}|ConcertTracker.csproj|c:\\users\\maja chudzik\\source\\repos\\ticketmaster_git\\services\\spotifyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A386058-4592-4D80-903F-C76429643832}|ConcertTracker.csproj|solutionrelative:services\\spotifyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A386058-4592-4D80-903F-C76429643832}|ConcertTracker.csproj|c:\\users\\maja chudzik\\source\\repos\\ticketmaster_git\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A386058-4592-4D80-903F-C76429643832}|ConcertTracker.csproj|solutionrelative:controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A386058-4592-4D80-903F-C76429643832}|ConcertTracker.csproj|c:\\users\\maja chudzik\\source\\repos\\ticketmaster_git\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A386058-4592-4D80-903F-C76429643832}|ConcertTracker.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +35,45 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Maja Chudzik\\source\\repos\\ticketmaster_git\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Maja Chudzik\\source\\repos\\ticketmaster_git\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFEAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T14:01:03.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EventsController.cs",
+              "DocumentMoniker": "C:\\Users\\Maja Chudzik\\source\\repos\\ticketmaster_git\\Controllers\\EventsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EventsController.cs",
+              "ToolTip": "C:\\Users\\Maja Chudzik\\source\\repos\\ticketmaster_git\\Controllers\\EventsController.cs",
+              "RelativeToolTip": "Controllers\\EventsController.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAQwDgAAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T13:59:57.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SpotifyService.cs",
+              "DocumentMoniker": "C:\\Users\\Maja Chudzik\\Source\\Repos\\ticketmaster_git\\Services\\SpotifyService.cs",
+              "RelativeDocumentMoniker": "Services\\SpotifyService.cs",
+              "ToolTip": "C:\\Users\\Maja Chudzik\\Source\\Repos\\ticketmaster_git\\Services\\SpotifyService.cs",
+              "RelativeToolTip": "Services\\SpotifyService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T13:58:51.919Z",
+              "EditorCaption": ""
             }
           ]
         }

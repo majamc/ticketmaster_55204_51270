@@ -16,14 +16,14 @@ namespace ConcertTracker.Controllers
     {
         private readonly TicketmasterService _ticketmasterService;
 
-        // Serwis do pobierania topowych piosenek artysty z Setlist.fm
-        private readonly SetlistFmService _setlistFmService;
+        // Serwis do pobierania topowych piosenek artysty ze Spotify
+        private readonly SpotifyService _SpotifyService;
 
-        // Konstruktor kontrolera, wstrzykujący zależności serwisów Ticketmaster i Setlist.fm.
-        public EventsController(TicketmasterService ticketmasterService, SetlistFmService setlistFmService)
+        // Konstruktor kontrolera, wstrzykujący zależności serwisów Ticketmaster i Spotify
+        public EventsController(TicketmasterService ticketmasterService, SpotifyService setlistFmService)
         {
             _ticketmasterService = ticketmasterService;
-            _setlistFmService = setlistFmService;
+            _SpotifyService = setlistFmService;
         }
 
         // Endpoint zwracający listę wydarzeń na podstawie słowa kluczowego (np. nazwa zespołu, miasto),
@@ -53,8 +53,11 @@ namespace ConcertTracker.Controllers
             {
                 try
                 {
-                    // Pobierz listę topowych piosenek dla artysty (na podstawie nazwy wydarzenia)
-                    var songs = await _setlistFmService.GetTopSongsAsync(ev.Name);
+                    // Pobierz listę topowych piosenek dla artysty (na podstawie nazwy ARTYSTY)
+                   // var songs = await _setlistFmService.GetTopTracksAsync(ev.Name);
+                    var songs = await _SpotifyService.GetTopTracksAsync(keyword);
+
+                    Console.WriteLine("NAME: " +keyword);
 
                     // Jeśli brak wyników – ustaw pustą listę
                     if (songs == null || !songs.Any())
