@@ -2,6 +2,7 @@
     const keyword = document.getElementById('keyword')?.value.trim();
     const lista = document.getElementById('lista-koncertow');
     const topSongsElem = document.getElementById('top-songs');
+    const photoElem = document.getElementById('photo');
 
     if (!keyword) {
         alert('Enter an artist/band name please.');
@@ -40,8 +41,20 @@
 
         lista.innerHTML = '';
         topSongsElem.innerHTML = '';
+        photoElem.innerHTML = '';
 
         const topSongs = dane[0]?.topSongs || [];
+        const photo = dane[0] || [];
+
+        if (photo?.artistImageUrl) {
+            photoElem.innerHTML = `
+            <div class="artist-div">
+                <img src="${photo.artistImageUrl}" alt="${photo.name}" class="artist-photo" />
+            </div>
+        `;
+        } else {
+            photoElem.innerHTML = "<p>Brak zdjęcia</p>";
+        }
 
         topSongsElem.innerHTML = `
         <div class="top-songs-div">
@@ -50,6 +63,10 @@
             ${topSongs.map(song => `<li>${song}</li>`).join('')}
           </ul>
         </div>
+        `;
+
+        lista.innerHTML = `
+            <p class="upcoming"><strong>Upcoming concerts:</strong></p>
         `;
 
         dane.forEach(koncert => {

@@ -45,6 +45,7 @@ button {
 
 #top-songs {
     color: #333;
+    font-size: 1.2rem;
 }
 
 .top-songs-div {
@@ -58,20 +59,39 @@ button {
 }
 
 .top-songs-div strong{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .top-songs-div ul li {
-    margin-left: -20px;
-    padding-left: -20px;
+    margin-left: -18px;
+    padding-left: -18px;
 }
 
+.artist-photo {
+    max-height: 250px;
+    padding: 0px;
+    padding-bottom: -5px;
+}
+
+.artist-div {
+    width: fit-content;
+    border-radius: 8px;
+    border: 5px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.box {
+    display: flex;
+    gap: 10px;
+    padding: 0px;
+}
 
 #lista-koncertow {
     list-style-type: none;
     padding: 0px;
     width: 100%;
     margin: 20px auto;
+    margin-top: 0px;
     color: #333;
 }
 
@@ -82,10 +102,11 @@ button {
   padding: 15px 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  font-size: 1.2rem;
 }
 
 #lista-koncertow li strong {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #333;
 }
 
@@ -94,10 +115,17 @@ button {
   color: #333;
 }
 
-.text{
+.text {
     color: white;
     font-size: larger;
     margin-bottom: -5px;
+}
+
+.upcoming {
+    color: white;
+    font-size: 1.7rem;
+    margin: 0px;
+    margin-bottom: 7px;
 }
 
 .link {

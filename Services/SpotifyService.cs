@@ -16,7 +16,7 @@ namespace ConcertTracker.Services
             _httpClient = httpClient;
         }
 
-        private async Task<string> GetAccessTokenAsync()
+        private async Task<string> GetAccessTokenAsync() //pobieranie access tokena czyli autoryzacja z spotify
         {
             var auth = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes($"{ClientId}:{ClientSecret}"));
 
@@ -39,7 +39,7 @@ namespace ConcertTracker.Services
 
         private async Task EnsureAccessTokenAsync()
         {
-            if (string.IsNullOrEmpty(_accessToken))
+            if (string.IsNullOrEmpty(_accessToken)) //czy istnieje access token
             {
                 _accessToken = await GetAccessTokenAsync();
 
@@ -50,14 +50,14 @@ namespace ConcertTracker.Services
         public async Task<List<string>> GetTopTracksAsync(string artistName)
         {
             await EnsureAccessTokenAsync();
-            if (string.IsNullOrEmpty(_accessToken)) return new List<string>();
+            if (string.IsNullOrEmpty(_accessToken)) return new List<string>(); //upewnienie czy jest access token
 
-            // Wyszukujemy artystê po nazwie
+            //wyszukiwanie artysty po nazwie
             var searchUrl = $"https://api.spotify.com/v1/search?q={Uri.EscapeDataString(artistName)}&type=artist&limit=1";
             var searchResponse = await _httpClient.GetAsync(searchUrl);
             var searchContent = await searchResponse.Content.ReadAsStringAsync();
 
-            if (!searchResponse.IsSuccessStatusCode)
+            if (!searchResponse.IsSuccessStatusCode) //jesli blad
                 throw new Exception($"Artist search error: {searchResponse.StatusCode} - {searchContent}");
 
             var searchData = JObject.Parse(searchContent);
@@ -67,7 +67,7 @@ namespace ConcertTracker.Services
             var artistId = artist["id"]?.ToString();
             if (string.IsNullOrEmpty(artistId)) return new List<string>();
 
-            // Pobieramy top tracki artysty
+            //pobieranie top piosenek artysty
             var topTracksUrl = $"https://api.spotify.com/v1/artists/{artistId}/top-tracks";
             var topTracksResponse = await _httpClient.GetAsync(topTracksUrl);
             var topTracksContent = await topTracksResponse.Content.ReadAsStringAsync();
@@ -80,11 +80,35 @@ namespace ConcertTracker.Services
 
             if (tracks == null) return new List<string>();
 
-            return tracks
+            return tracks //zwracanie 5 top piosenek
                 .Take(5)
                 .Select(t => t["name"]?.ToString() ?? "")
                 .Where(name => !string.IsNullOrWhiteSpace(name))
                 .ToList();
         }
+        public async Task<string> GetArtistImageUrlAsync(string artistName) //do pobierania zdj arysty
+        {
+            await EnsureAccessTokenAsync();
+            if (string.IsNullOrEmpty(_accessToken)) return null; //upewnienie czy jest access token
+
+            var searchUrl = $"https://api.spotify.com/v1/search?q={Uri.EscapeDataString(artistName)}&type=artist&limit=1";
+            var searchResponse = await _httpClient.GetAsync(searchUrl); //wysylanie zapytania get do spotify
+            var searchContent = await searchResponse.Content.ReadAsStringAsync(); //odczytanie odp http 
+
+            if (!searchResponse.IsSuccessStatusCode) //jesli blad
+                throw new Exception($"Artist search error: {searchResponse.StatusCode} - {searchContent}");
+
+            var searchData = JObject.Parse(searchContent);
+            var artist = searchData["artists"]?["items"]?.FirstOrDefault();
+            if (artist == null) return null;
+
+            var images = artist["images"];
+            if (images == null || !images.Any()) return null;
+
+            var imageUrl = images.First()["url"]?.ToString(); //url pierwszego zdj
+
+            return imageUrl; //zwrocenie zdj artysty
+        }
+
     }
 }

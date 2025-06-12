@@ -8,27 +8,23 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace ConcertTracker.Controllers
 {
-    // Kontroler obsługujący żądania związane z wydarzeniami z TicketmasterApi.
     [Authorize]
-    //[AllowAnonymous]
+    //[AllowAnonymous] //potem usunac
     [ApiController]
     [Route("api/events")] //adres bazowy
     public class EventsController : ControllerBase
     {
-        private readonly TicketmasterService _ticketmasterService;
+        private readonly TicketmasterService _ticketmasterService; //serwis tickemastera do koncertow
+        private readonly SpotifyService _SpotifyService; //serwis spotify do zdj artysty i topowych piosenek
 
-        // Serwis do pobierania topowych piosenek artysty ze Spotify
-        private readonly SpotifyService _SpotifyService;
-
-        // Konstruktor kontrolera, wstrzykujący zależności serwisów Ticketmaster i Spotify
+        //wstrzykiwanie zaleznosci serwisow
         public EventsController(TicketmasterService ticketmasterService, SpotifyService setlistFmService)
         {
             _ticketmasterService = ticketmasterService;
             _SpotifyService = setlistFmService;
         }
 
-        // Endpoint zwracający listę wydarzeń na podstawie słowa kluczowego (np. nazwa zespołu, miasto),
-        // wraz z 3 najpopularniejszymi piosenkami artysty (jeśli dostępne).
+        //zwracajanie listy wydarzen na podstawie slowa kluczowego z piosenkami i zdjeciem artysty
         [HttpGet("{keyword}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -38,57 +34,56 @@ namespace ConcertTracker.Controllers
             if (string.IsNullOrWhiteSpace(keyword))
                 throw new BadRequestException("Enter a artist/band name");
 
-            // Pobierz wydarzenia pasujące do słowa kluczowego z Ticketmaster
+            //pobieranie wydarzenia pasujacego do slowa kluczowego z ticketmastera
             var events = await _ticketmasterService.GetEventsAsync(keyword);
 
-            // Sprawdzenie, czy API zwróciło wydarzenia
-            if (events == null || !events.Any())
+            if (events == null || !events.Any()) //czy API zwrocilo wydarzenia
             {
                 throw new NotFoundException("No concerts for that artist/band.");
             }
 
             var result = new List<EventWithSongsResponse>();
 
-            // Iteruj przez każde wydarzenie
+            //iteruj przez kazde wydarzenie
             foreach (var ev in events)
             {
                 try
                 {
-                    // Pobierz listę topowych piosenek dla artysty (na podstawie nazwy ARTYSTY)
-                   // var songs = await _setlistFmService.GetTopTracksAsync(ev.Name);
-                    var songs = await _SpotifyService.GetTopTracksAsync(keyword);
+                   //var songs = await _setlistFmService.GetTopTracksAsync(ev.Name);
+                    var songs = await _SpotifyService.GetTopTracksAsync(keyword); //pobieranie top 5 piosenek artysty
+                    var imageUrl = await _SpotifyService.GetArtistImageUrlAsync(keyword); //pobieranie zdj
 
                     Console.WriteLine("NAME: " +keyword);
 
-                    // Jeśli brak wyników – ustaw pustą listę
-                    if (songs == null || !songs.Any())
+                    if (songs == null || !songs.Any()) //jesli brak wynikow
                     {
                         songs = new List<string> { "No data about top songs" };
                     }
 
-                    // Dodaj wydarzenie z przypisanymi piosenkami do listy wynikowej
-                    result.Add(new EventWithSongsResponse
+                    result.Add(new EventWithSongsResponse //dodanie wydarzenia z przypisanymi piosenkami do listy wynikowej
                     {
                         Name = ev.Name,
                         Date = ev.Date,
                         Venue = ev.Venue,
-                        TopSongs = songs
+                        TopSongs = songs,
+                        ArtistImageUrl = imageUrl ?? ""
                     });
                 }
                 catch (Exception ex)
                 {
-                    // Obsługa błędu – jeżeli nie udało się pobrać piosenek, dodaj komunikat zastępczy
+                    //jesli sie nie udalo pobrac piosenek
                     result.Add(new EventWithSongsResponse
                     {
                         Name = ev.Name,
                         Date = ev.Date,
                         Venue = ev.Venue,
-                        TopSongs = new List<string> { "Error while loading songs: " + ex.Message }
+                        TopSongs = new List<string> { "Error while loading songs: " + ex.Message },
+                        ArtistImageUrl = ""
                     });
                 }
             }
 
-            // Zwróć gotową listę wydarzeń z przypisanymi piosenkami
+            //zwrocenie listy wydarzen z przypisanymi piosenkami i zdjeciem artysty
             return Ok(result);
         }
     }
