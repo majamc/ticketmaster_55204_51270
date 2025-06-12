@@ -1,10 +1,13 @@
 # Aplikacja do śledzenia koncertów
 
 ### Opis
-
+Aplikacja do śledzenia koncertów to proste i intuicyjne narzędzie, które umożliwia użytkownikom szybkie wyszukiwanie nadchodzących koncertów wybranych artystów lub zespołów. Dzięki integracji z zewnętrznymi źródłami danych aplikacja prezentuje również listę najpopularniejszych utworów danego wykonawcy, co pozwala lepiej przygotować się do wydarzenia i przewidzieć, jakie piosenki mogą zostać zagrane na żywo.
 
 ### Funkcjonalności
-
+- **logowanie** - aby uzyskać dostęp do funkcji aplikacji, użytkownik musi się zalogować.
+- **tworzenie konta** - nowi użytkownicy mogą łatwo założyć konto, które pozwoli im logować się w przyszłości i korzystać z aplikacji.
+- **wyszukiwanie koncertów** - aplikacja umożliwia wyszukiwanie nadchodzących koncertów na podstawie nazwy artysty lub zespołu.
+- **wyświetlanie top piosenek** -  wraz z informacjami o koncertach użytkownik otrzymuje listę najpopularniejszych utworów danego artysty.
 
 ### Użyte zewnętrzne API
 - **ticketmaster** - do zbierania danych o przyszłych koncertach wybranego artysty
