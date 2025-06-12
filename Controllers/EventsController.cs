@@ -10,6 +10,7 @@ namespace ConcertTracker.Controllers
 {
     // Kontroler obsługujący żądania związane z wydarzeniami z TicketmasterApi.
     [Authorize]
+    //[AllowAnonymous]
     [ApiController]
     [Route("api/events")] //adres bazowy
     public class EventsController : ControllerBase

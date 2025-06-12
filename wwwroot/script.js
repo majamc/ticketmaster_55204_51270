@@ -1,6 +1,7 @@
 ﻿async function findConcerts() {
     const keyword = document.getElementById('keyword')?.value.trim();
     const lista = document.getElementById('lista-koncertow');
+    const topSongsElem = document.getElementById('top-songs');
 
     if (!keyword) {
         alert('Enter an artist/band name please.');
@@ -32,12 +33,24 @@
             return;
         }
 
-        lista.innerHTML = '';
-
         if (!dane || dane.length === 0) {
             alert('No concerts found.');
             return;
         }
+
+        lista.innerHTML = '';
+        topSongsElem.innerHTML = '';
+
+        const topSongs = dane[0]?.topSongs || [];
+
+        topSongsElem.innerHTML = `
+        <div class="top-songs-div">
+          <strong>Top songs:</strong>
+          <ul>
+            ${topSongs.map(song => `<li>${song}</li>`).join('')}
+          </ul>
+        </div>
+        `;
 
         dane.forEach(koncert => {
             const li = document.createElement('li');
@@ -45,7 +58,7 @@
               <strong>${koncert.name}</strong><br>
               Venue: ${koncert.venue}<br>
               Date: ${koncert.date}<br>
-              Top Songs:<br> ${koncert.topSongs.map(song => `&nbsp;&nbsp;- ${song}`).join('<br>')}
+              
             `;
             lista.appendChild(li);
         });
@@ -75,7 +88,7 @@ async function logIn() {
         }
 
         localStorage.setItem('token', dane.token);
-        alert('Zalogowano pomyślnie!');
+        alert('Log in succesfull!');
         window.location.href = 'concerts.html';
     } catch (err) {
         console.error(err);

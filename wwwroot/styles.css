@@ -1,4 +1,5 @@
 body {
+    font-family: Arial, sans-serif;
     margin: 20px;
     margin-left: 20px;
     padding: 0;
@@ -8,14 +9,12 @@ body {
 }
 
 h1 {
-    margin-left: 10px;
     color: white;
     margin-top: 15px;
     font-size: 2.5rem;
 }
 
 input {
-    margin-left: 10px;
     background-color: #ffffff;
     color: #323232;
     width: 500px;
@@ -44,19 +43,41 @@ button {
     background-color: #969696;
 }
 
+#top-songs {
+    color: #333;
+}
+
+.top-songs-div {
+    background-color: #e0e0e0;
+    width: fit-content;
+    padding: 15px 20px;
+    padding-bottom: 10px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.top-songs-div strong{
+    font-size: 1.2rem;
+}
+
+.top-songs-div ul li {
+    margin-left: -20px;
+    padding-left: -20px;
+}
+
+
 #lista-koncertow {
-    color: white;
     list-style-type: none;
-    padding: 0;
-    width: 99%;
+    padding: 0px;
+    width: 100%;
     margin: 20px auto;
-    font-family: Arial, sans-serif;
     color: #333;
 }
 
 #lista-koncertow li {
   background-color: #e0e0e0;
-  width: 99%;
+  width: 100%;
   margin-bottom: 15px;
   padding: 15px 20px;
   border-radius: 8px;
@@ -64,7 +85,7 @@ button {
 }
 
 #lista-koncertow li strong {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   color: #333;
 }
 
@@ -73,16 +94,6 @@ button {
   color: #333;
 }
 
-#lista-koncertow li .top-songs {
-  margin-top: 8px;
-  padding-left: 15px;
-  color: #333;
-}
-
-#lista-koncertow li .top-songs li {
-  list-style-type: disc;
-  color: #333;
-}
 .text{
     color: white;
     font-size: larger;

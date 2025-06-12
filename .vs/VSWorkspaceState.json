@@ -2,11 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Controllers",
-    "\\Exceptions",
-    "\\Middlewares",
-    "\\Models",
-    "\\Services"
+    "\\Services",
+    "\\wwwroot"
   ],
-  "SelectedNode": "\\concerttracker.db",
+  "SelectedNode": "\\ConcertTracker.csproj",
   "PreviewInSolutionExplorer": false
 }
