@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConcertTracker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+862961f9ac4d64a58705fa490b7fd74115233783")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb988ad5d5c8a4e2b98689a15370f8bee9096dc5")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConcertTracker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConcertTracker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

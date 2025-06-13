@@ -7,7 +7,6 @@ using ConcertTracker.Models.TicketmasterAPI.Models;
 
 namespace ConcertTracker.Services
 {
-    //komunikacja z API Ticketmaster
     public class TicketmasterService
     {
         private readonly HttpClient _httpClient; //klient HTTP do komunikacji z API

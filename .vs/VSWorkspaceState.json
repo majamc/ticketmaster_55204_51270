@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\Controllers",
+    "\\Models",
     "\\Services",
     "\\wwwroot"
   ],
-  "SelectedNode": "\\ConcertTracker.csproj",
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }

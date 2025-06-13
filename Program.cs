@@ -46,8 +46,8 @@ builder.Services.AddAuthentication(options =>
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-        ValidIssuer = builder.Configuration["Jwt:Issuer"], //nadawca tokenu (czyli nasza aplikacja)
-        ValidAudience = builder.Configuration["Jwt:Audience"], //odbiorca tokenu, klient
+        ValidIssuer = builder.Configuration["Jwt:Issuer"], //nadawca tokenu (aplikacja)
+        ValidAudience = builder.Configuration["Jwt:Audience"], //odbiorca tokenu (klient)
         IssuerSigningKey = new SymmetricSecurityKey(
             Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])) //klucz do podpisywania tokenow
     };
@@ -75,7 +75,7 @@ app.UseCors("AllowAll");
 app.UseAuthentication(); //autentykacja
 app.UseAuthorization(); //autoryzacja
 
-app.UseMiddleware<ConcertTracker.Middlewares.ExceptionMiddleware>();
+app.UseMiddleware<ConcertTracker.Middlewares.ExceptionMiddleware>(); //obsluga bledow
 
 app.MapControllers();
 app.Run(); //start aplikacji

@@ -7,11 +7,11 @@ Aplikacja do śledzenia koncertów to proste i intuicyjne narzędzie, które umo
 - **logowanie** - aby uzyskać dostęp do funkcji aplikacji, użytkownik musi się zalogować.
 - **tworzenie konta** - nowi użytkownicy mogą łatwo założyć konto, które pozwoli im logować się w przyszłości i korzystać z aplikacji.
 - **wyszukiwanie koncertów** - aplikacja umożliwia wyszukiwanie nadchodzących koncertów na podstawie nazwy artysty lub zespołu.
-- **wyświetlanie top piosenek** -  wraz z informacjami o koncertach użytkownik otrzymuje listę najpopularniejszych utworów danego artysty.
+- **wyświetlanie top piosenek i zdjęcia artysty** -  wraz z informacjami o koncertach użytkownik otrzymuje listę najpopularniejszych utworów i zdjęcie danego artsty.
 
 ### Użyte zewnętrzne API
 - **ticketmaster** - do zbierania danych o przyszłych koncertach wybranego artysty
-- **spotify** - do zbierania 5 topowych piosenek artysty
+- **spotify** - do zbierania 5 topowych piosenek i zdjęcia artsyty
 
 ### Instrukcja odpalenia aplikacji
 1. Zklonuj repozytorium https://github.com/majamc/ticketmaster_55204_51270_51373 //potem zmienic nazwe

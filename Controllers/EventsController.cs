@@ -9,7 +9,6 @@ using Microsoft.AspNetCore.Authorization;
 namespace ConcertTracker.Controllers
 {
     [Authorize]
-    //[AllowAnonymous] //potem usunac
     [ApiController]
     [Route("api/events")] //adres bazowy
     public class EventsController : ControllerBase
@@ -32,14 +31,14 @@ namespace ConcertTracker.Controllers
         public async Task<ActionResult<List<EventWithSongsResponse>>> GetEventsWithSongs(string keyword)
         {
             if (string.IsNullOrWhiteSpace(keyword))
-                throw new BadRequestException("Enter a artist/band name");
+                throw new BadRequestException("Enter an artist/band name");
 
             //pobieranie wydarzenia pasujacego do slowa kluczowego z ticketmastera
             var events = await _ticketmasterService.GetEventsAsync(keyword);
 
             if (events == null || !events.Any()) //czy API zwrocilo wydarzenia
             {
-                throw new NotFoundException("No concerts for that artist/band.");
+                throw new NotFoundException("No information about that artist/band.");
             }
 
             var result = new List<EventWithSongsResponse>();
@@ -49,7 +48,6 @@ namespace ConcertTracker.Controllers
             {
                 try
                 {
-                   //var songs = await _setlistFmService.GetTopTracksAsync(ev.Name);
                     var songs = await _SpotifyService.GetTopTracksAsync(keyword); //pobieranie top 5 piosenek artysty
                     var imageUrl = await _SpotifyService.GetArtistImageUrlAsync(keyword); //pobieranie zdj
 

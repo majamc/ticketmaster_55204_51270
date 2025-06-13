@@ -6,28 +6,26 @@ namespace ConcertTracker.Middlewares
     public class ExceptionMiddleware
     {
         private readonly RequestDelegate _next; //delegat do kolejnego middleware w kolejce.
-        //po zakonczeniu naszego kodu, wolamy _next(context) zeby przekazac sterowanie dalej.
-        private readonly ILogger<ExceptionMiddleware> _logger; //logger do logowania bledow
+        private readonly ILogger<ExceptionMiddleware> _logger;
 
         public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger)
-        { //konstruktor
+        {
             _next = next;
             _logger = logger;
         }
 
-        public async Task InvokeAsync(HttpContext context) //glowna metoda wywolywana automatycznie przy kazdym zadaniu
+        public async Task InvokeAsync(HttpContext context)
         {
             try
             {
                 await _next(context); //przekazanie dalej zadania do nastepnych warstw (np. kontrolera)
             }
-            catch (Exception ex) //jesli wystapi wyjatek
+            catch (Exception ex)
             {
                 _logger.LogError(ex, "An error occurred"); //logowanie wyjatku
 
                 context.Response.ContentType = "application/json";
-                //500 to bedzie domyslny blad
-                HttpStatusCode statusCode = HttpStatusCode.InternalServerError; //jesli nie przwidzimy jakiegos bledu ty bedzie blad 500
+                HttpStatusCode statusCode = HttpStatusCode.InternalServerError; //jesli nie przwidziany blad to bedzie blad 500
                 string message = "Internal server error";
 
                 switch (ex)
@@ -60,7 +58,7 @@ namespace ConcertTracker.Middlewares
                     details = ex.Message //szczegoly wyjatku
                 };
 
-                await context.Response.WriteAsync(JsonSerializer.Serialize(response)); //Wysylanie JSON jako odpowied? dla u?ytkownika
+                await context.Response.WriteAsync(JsonSerializer.Serialize(response)); //wysylanie JSON jako odpowiedz dla uzytkownika
             }
         }
     }

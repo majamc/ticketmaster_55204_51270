@@ -9,7 +9,10 @@
         return;
     }
 
-    lista.innerHTML = `<p class="text">Loading...</p>`;
+    topSongsElem.innerHTML = ``;
+    photoElem.innerHTML = ``;
+
+    lista.innerHTML = `<p class="loading">Loading...</p>`;
 
     try {
         const token = localStorage.getItem('token');
@@ -39,21 +42,17 @@
             return;
         }
 
-        lista.innerHTML = '';
-        topSongsElem.innerHTML = '';
-        photoElem.innerHTML = '';
-
         const topSongs = dane[0]?.topSongs || [];
-        const photo = dane[0] || [];
+        const photo = dane[0];
 
         if (photo?.artistImageUrl) {
             photoElem.innerHTML = `
             <div class="artist-div">
-                <img src="${photo.artistImageUrl}" alt="${photo.name}" class="artist-photo" />
+                <img src="${photo.artistImageUrl}" alt="Image of artist ${photo.name}" class="artist-photo" />
             </div>
         `;
         } else {
-            photoElem.innerHTML = "<p>Brak zdjęcia</p>";
+            photoElem.innerHTML = "<p>No image of the artist</p>";
         }
 
         topSongsElem.innerHTML = `
@@ -88,7 +87,6 @@
 async function logIn() {
     const email = document.getElementById('email')?.value.trim();
     const password = document.getElementById('password')?.value.trim();
-    const komunikat = document.getElementById('komunikat');
 
     try {
         const response = await fetch('http://localhost:5101/api/auth/login', {
