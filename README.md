@@ -14,7 +14,7 @@ Aplikacja do śledzenia koncertów to proste i intuicyjne narzędzie, które umo
 - **spotify** - do zbierania 5 topowych piosenek i zdjęcia artsyty
 
 ### Instrukcja odpalenia aplikacji
-1. Zklonuj repozytorium https://github.com/majamc/ticketmaster_55204_51270
+1. Zklonuj repozytorium https://github.com/majamc/ticketmaster_55204
 2. Otwórz kod w dowolnym edytorze kodu (np. Visual Studio 2022)
 3. Upewnij się że masz zainstalowany dotnet ef, jeśli nie to zainstaluj go poleceniem 'dotnet tool install --global dotnet-ef'
 4. Otwórz terminal w katalogu projektu i wpisz po kolei 'dotnet restore ConcertTracker.csproj', 'dotnet ef database update' aby utworzyć bazę danych i 'dotnet run' aby uruchomić aplikcję
